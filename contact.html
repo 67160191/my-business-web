@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>ติดต่อ McDonald’s</h1>
+    </header>
+
+    <!-- 4.1 Contact from -->
+    <main>
+      <form action="#">
+        <fieldset>
+          <legend>ข้อมูลส่วนตัว</legend>
+          <label for="fname">ชื่อจริง:</label>
+          <input type="text" id="fname" name="firstname" required />
+          <label for="lname">นามสกุล:</label>
+          <input type="text" name="lastname" id="lname" required /> <br />
+          <label for="email" id="emaill">อีเมล:</label>
+          <input type="email" name="email" id="email" required />
+          <label for="tel">เบอร์ติดต่อ:</label>
+          <input type="text" name="tel" id="tel" required /> <br />
+          <label for="tel">ข้อความติดต่อ:</label> <br />
+          <textarea
+            name="messege"
+            id="messege"
+            cols="30"
+            rows="3"
+            required
+          ></textarea
+          ><br />
+          <div>
+            <input type="submit" value="ยืนยัน" />
+            <input type="reset" value="ยกเลิก" />
+          </div>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
