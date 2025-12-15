@@ -14,3 +14,39 @@ body {
   background-color: white;
   margin-top: 3.8rem;
 }
+
+/* ======================== 
+   TYPOGRAPHY 
+   ======================== */
+
+/* Element Selectors  */
+h1 {
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+}
+h2 {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+}
+h3 {
+  color: rgb(0, 0, 0);
+  font-size: 1.17rem;
+}
+h4 {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+p {
+  line-height: 2;
+}
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 0.2rem 1rem;
+}
+a:hover {
+  display: inline-flex;
+  color: red;
+  background-color: rgb(241, 241, 241);
+  border-radius: 1rem;
+}
