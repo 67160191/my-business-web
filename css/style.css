@@ -50,3 +50,37 @@ a:hover {
   background-color: rgb(241, 241, 241);
   border-radius: 1rem;
 }
+
+/* Class Selectors */
+.hero {
+  position: relative;
+  text-align: center;
+  min-height: 30vh;
+  align-content: center;
+  /* ปรับสีฟ้อนใหม่ */
+}
+.hero::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-image: url(/images/img-background.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(0.15rem);
+}
+.card {     /*ตรงนี้เป็น card เรียงแนวเดียว*/
+  padding: 2;
+  border: 2px;
+  box-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+  background-color: rgb(160, 160, 160); /
+}
+.btn {
+  padding: 0;
+  border: 0;
+  box-shadow: 0;
+}
+.sections {
+  /* จัดระยะห่าง */
+  margin: 0;
+}  
