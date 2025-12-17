@@ -122,3 +122,21 @@ a:hover {
 #footer {
   /* Footer style */
 }
+
+/* Pseudo-class */
+menu:hover {
+}
+items:hover {
+}
+button:hover {
+}
+card:hover {
+}
+button:active {
+}
+li:first-child {
+}
+li:last-child {
+}
+li:nth-child {
+}
