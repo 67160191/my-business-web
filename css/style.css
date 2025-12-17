@@ -12,7 +12,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 2;
   background-color: white;
-  margin-top: 3.8rem;
 }
 
 /* ======================== 
@@ -39,23 +38,49 @@ h4 {
 p {
   line-height: 2;
 }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  margin-left: 1rem;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+  background-color: rgb(255, 0, 0);
+  align-items: center;
+  width: 30rem;
+  height: 66px;
+}
+nav {
+  margin-left: auto;
+}
 a {
-  color: rgb(0, 0, 0);
+  display: inline-flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 0.2rem 1rem;
 }
 a:hover {
-  display: inline-flex;
   color: red;
   background-color: rgb(241, 241, 241);
   border-radius: 1rem;
+  margin: 0;
 }
 
 /* Class Selectors */
 .hero {
   position: relative;
   text-align: center;
-  min-height: 30vh;
+  min-height: 70vh;
   align-content: center;
   /* ปรับสีฟ้อนใหม่ */
 }
@@ -69,11 +94,17 @@ a:hover {
   z-index: -1;
   filter: blur(0.15rem);
 }
-.card {     /*ตรงนี้เป็น card เรียงแนวเดียว*/
-  padding: 2;
+.card {
+  /*ตรงนี้เป็น card เรียงแนวเดียว*/
+  padding: 2px;
   border: 2px;
   box-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
-  background-color: rgb(160, 160, 160); /
+  background-color: rgb(160, 160, 160);
+  display: inline-flex;
+  margin: 1rem 1rem;
+  width: 20rem;
+  flex-direction: column;
+  border-radius: 1rem;
 }
 .btn {
   padding: 0;
@@ -83,4 +114,16 @@ a:hover {
 .sections {
   /* จัดระยะห่าง */
   margin: 0;
-}  
+}
+
+/* ID Selectors */
+menu:hover {
+}
+items:hover {
+}
+button:hover {
+}
+card:hover {
+}
+button:active {
+}
