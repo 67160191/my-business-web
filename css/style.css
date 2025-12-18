@@ -65,14 +65,14 @@ nav ul {
 nav {
   margin-left: auto;
 }
-a {
+li a {
   display: inline-flex;
   align-items: center;
   color: var(--accent);
   text-decoration: none;
   padding: 0.2rem 1rem;
 }
-a:hover {
+li a:hover {
   color: var(--primary);
   background-color: var(--accent);
   border-radius: 1rem;
@@ -95,23 +95,27 @@ a:hover {
   z-index: -1;
   filter: blur(0.15rem);
 }
+.featured-services {
+  background-color: var(--accent);
+  text-align: center;
+  h2 {
+    text-align: left;
+    padding: 1.5rem 15vw;
+  }
+}
 .card {
   /*ตรงนี้เป็น card เรียงแนวเดียว*/
-  padding: 2px;
+  padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   background-color: var(--accent);
   display: inline-flex;
-  /* margin: 1rem 1rem; */
+  margin: 0.5rem;
   flex-direction: column;
   border-radius: 0.5rem;
   flex: 1;
-  flex-direction: column;
-
-  /* padding: 20px (content padding) 
-• margin: 10px 0 (margin ระหว่าง cards) 
-• border: 1px solid #ddd 
-• border-radius: 8px 
-• box-shadow: 0 2px 8px rgba(0,0,0,0.1)  */
+  text-align: center;
+  width: 320px;
+  height: 350px;
 }
 .btn {
   padding: 0;
@@ -145,6 +149,7 @@ a:hover {
   padding: 30px 20px;
   margin-top: auto;
   background-color: var(--neutral);
+  color: var(--accent);
 }
 
 /* Pseudo-class */
@@ -153,6 +158,8 @@ menu:hover {
 items:hover {
 }
 button:hover {
+  text-decoration: underline;
+  transform: translateY(-5px);
 }
 card:hover {
 }
@@ -187,3 +194,16 @@ li:nth-child {
 /* ======================== 
    RESPONSIVE / MEDIA QUERIES 
    ======================== */
+/* เดี๋ยวมาทำหน้า index ต่อ */
+a button {
+  width: 5.7rem;
+  border-radius: 0.5rem;
+  background-color: var(--accent);
+  width: 5rem;
+  height: 40px;
+  border: none;
+  box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  padding: 0px;
+  transition: all 0.3s ease;
+}
