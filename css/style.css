@@ -207,3 +207,17 @@ a button {
   padding: 0px;
   transition: all 0.3s ease;
 }
+.services-list {
+  display: block;
+  background-color: #b90017;
+  height: 200px;
+  text-align: center;
+  color: var(--accent);
+  align-content: center;
+}
+
+/* main {
+  background-color: #ffc600;
+  width: 90%;
+  margin: 0 auto;
+} */
