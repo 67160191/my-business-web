@@ -52,6 +52,10 @@ header {
 header h1 {
   margin-left: 1rem;
 }
+header img {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
 nav ul {
   display: flex;
   gap: 2rem;
@@ -76,31 +80,31 @@ li a:hover {
   color: var(--primary);
   background-color: var(--accent);
   border-radius: 1rem;
+  text-decoration: underline;
+  transition: all 0.15s ease;
 }
 /* Class Selectors */
 .hero {
   position: relative;
   text-align: center;
   min-height: 70vh;
-  align-content: center;
+  align-content: end;
   color: var(--accent);
   font-size: 1.5rem;
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.7);
 }
 .hero h2 {
   color: var(--accent);
-  font-size: 4rem;
-  text-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .hero::before {
   content: "";
   inset: 0;
   position: absolute;
-  background-image: url(/images/img-background.jpg);
+  background-image: url(/images/Banner.jpg);
   background-position: center;
   background-size: cover;
   z-index: -1;
-  filter: blur(0.2rem);
 }
 .featured-services {
   background-color: var(--accent);
@@ -123,46 +127,26 @@ li a:hover {
   height: 350px;
   transition: all 0.3s ease;
 }
-.btn {
-  padding: 0;
-  border: 0;
-  box-shadow: 0;
-  position: fixed;
-}
-.sections {
-  /* จัดระยะห่าง */
-  margin: 0;
-}
 .services {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
-/* Team Members Grid Layout  */
+
 .team {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
-.team-member {
-  /* card styling */
-}
-/* ID Selectors */
-#header {
-  /* Header style */
-}
 #footer {
   margin-top: 2rem;
   padding: 2rem 1.5rem;
   background-color: var(--neutral);
+  height: 12rem;
   color: var(--accent);
 }
 
 /* Pseudo-class */
-menu:hover {
-}
-items:hover {
-}
 .btn-back-to-top:hover {
   text-decoration: underline;
   transform: translateY(-0.5rem);
@@ -182,7 +166,6 @@ items:hover {
   padding: 40px 20px;
 }
 
-/* Color palatte */
 :root {
   --primary: #b90017;
   --secondary: #ffc600;
@@ -194,10 +177,6 @@ items:hover {
    LAYOUT & CONTAINERS 
    ======================== */
 
-/* ======================== 
-   RESPONSIVE / MEDIA QUERIES 
-   ======================== */
-/* เดี๋ยวมาทำหน้า index ต่อ */
 .btn-back-to-top {
   display: inline-flex;
   border-radius: 0.5rem;
@@ -302,7 +281,6 @@ items:hover {
 
 .compare_package td:first-child {
   text-align: left;
-  font-weight: 500;
 }
 .compare_package tbody tr:last-child td {
   font-weight: bold;
@@ -468,6 +446,25 @@ items:hover {
 #team_members {
   text-align: center;
 }
+#team_members > h2 {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 2rem;
+}
+
+#team_members > h2::before {
+  content: "";
+  position: absolute;
+  left: 47rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.35rem;
+  height: 3rem;
+  background-color: var(--secondary);
+  border-radius: 4px;
+}
 
 #team_members figure {
   display: inline-flex;
@@ -485,15 +482,14 @@ items:hover {
 
 #team_members figure:hover {
   transform: translateY(-0.8rem);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 18px 2rem rgba(0, 0, 0, 0.3);
 }
 
 #team_members img {
   width: 140px;
   height: 140px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--secondary);
+  border-radius: 0.5rem;
 }
 
 #team_members figcaption {
@@ -503,44 +499,260 @@ items:hover {
 }
 
 /* ========================
-   MISSION & VISION
+   MISSION & VISION ENHANCED
    ======================== */
+
 #misson_vison {
-  background: linear-gradient(135deg, #b90017, #8f0012);
-  color: var(--accent);
+  padding: 4rem 2rem;
+  margin: 4rem auto;
+  max-width: 1100px;
+  border-radius: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Decorative background glow */
+#misson_vison::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, 0.15),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* Headings */
 #misson_vison h2 {
-  color: var(--secondary);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  color: var(--primary);
 }
 
+/* underline accent */
+#misson_vison h2::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 0.3rem;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  margin-top: 0.6rem;
+}
+
+/* Paragraphs */
 #misson_vison p {
-  margin-bottom: 1.5rem;
-  font-size: 1.05rem;
-  line-height: 1.9;
+  max-width: 850px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.5rem 2rem;
+  border-radius: 1.2rem;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* spacing between Mission & Vision */
+#misson_vison h2 + p {
+  margin-bottom: 2.5rem;
 }
 
 /* ========================
-   BACK TO HOME LINK
+   BACK TO HOME BUTTON
    ======================== */
-main > p:last-child {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-main > p:last-child a {
+.btn-back-to-home {
   display: inline-block;
-  padding: 0.6rem 1.4rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
   background-color: var(--primary);
   color: var(--accent);
-  border-radius: 2rem;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.25s ease;
+  height: 3rem;
+  text-align: center;
+  align-content: center;
+  width: 8rem;
+  margin-left: 3rem;
+}
+.btn-back-to-home:hover {
+  text-decoration: underline;
+  transform: translateY(-0.5rem);
+}
+/* ========================
+   RESPONSIVE
+   ======================== */
+
+@media (max-width: 768px) {
+  #misson_vison {
+    padding: 3rem 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  #misson_vison h2 {
+    font-size: 1.8rem;
+  }
+
+  #misson_vison p {
+    font-size: 1rem;
+    padding: 1.2rem 1.5rem;
+  }
+}
+/* ========================
+   RESPONSIVE - TABLET
+   ======================== */
+@media (max-width: 1024px) {
+  nav ul {
+    width: 45vw;
+    gap: 1.2rem;
+  }
+
+  .card-container {
+    flex-wrap: wrap;
+  }
+
+  .compare_package table {
+    width: 90%;
+  }
+
+  #history > h2 {
+    padding-left: 6rem;
+  }
+
+  #history > h2::before {
+    left: 4rem;
+  }
+
+  #team_members > h2::before {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
-main > p:last-child a:hover {
-  background-color: var(--secondary);
-  color: #000;
-  transform: translateY(-0.3rem);
+/* ========================
+   RESPONSIVE - MOBILE
+   ======================== */
+@media (max-width: 768px) {
+  /* HEADER & NAV */
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  header h1 {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 55vh;
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+  }
+
+  /* SERVICES / CARDS */
+  .services,
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  /* COMPARE TABLE */
+  .compare_package table {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .compare_package th,
+  .compare_package td {
+    padding: 0.5rem;
+  }
+
+  /* HISTORY */
+  #history > h2 {
+    padding-left: 1.5rem;
+    text-align: center;
+  }
+
+  #history > h2::before {
+    left: 0;
+    display: none;
+  }
+
+  /* TEAM */
+  #team_members figure {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  #team_members > h2::before {
+    display: none;
+  }
+
+  /* CONTACT */
+  #contact_form div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #contact_form input[type="submit"],
+  #contact_form input[type="reset"] {
+    width: 100%;
+  }
+
+  /* MAP */
+  #maps iframe {
+    min-height: 280px;
+  }
+
+  /* BACK BUTTON */
+  .btn-back-to-top {
+    width: 5rem;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ========================
+   SMALL MOBILE
+   ======================== */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
 }
