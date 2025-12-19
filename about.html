@@ -12,16 +12,29 @@
       name="description"
       content="เรื่องราวของ “McDonald’s ตั้งแต่ก่อตั้งโดยพี่น้องแมคโดนัลด์ จนถึงการขยายสาขาไปทั่วโลก พร้อมข้อมูลทีมผู้ก่อตั้งและวิสัยทัศน์"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <h1>เกี่ยวกับ McDonald’s</h1>
+    <header id="header">
+      <img src="images/Logo.png" alt="logo" width="5%" />
+      <h1>McDonald's</h1>
+
+      <!-- 1.2 Navigation menu -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="about.html">เกี่ยวกับ</a></li>
+          <li><a href="services.html">บริการ</a></li>
+          <li><a href="contact.html">ติดต่อ</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
       <!-- 2.1 Story of company -->
       <section id="history">
+        <h1 class="description">เกี่ยวกับ McDonald’s</h1>
         <h2>เรื่องราวของ McDonald’s</h2>
         <div>
           <p>
@@ -122,5 +135,10 @@
       <!-- 2.4 Back to home -->
       <p><a href="index.html">← กลับหน้าหลัก</a></p>
     </main>
+    <!-- Button back to top  -->
+    <a href="#" class="btn-back-to-top">Back to top</a>
+    <footer id="footer">
+      <p>&copy; 2025 My Business Web. All rights reserved</p>
+    </footer>
   </body>
 </html>
