@@ -12,15 +12,26 @@
       name="description"
       content="ติดต่อ McDonald’s สำหรับข้อมูลเพิ่มเติมผ่านฟอร์มออนไลน์ พร้อมที่อยู่บริษัทและแผนที่"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <h1>ติดต่อ McDonald’s</h1>
+    <header id="header">
+      <img src="images/Logo.png" alt="logo" width="5%" />
+      <h1>McDonald's</h1>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="about.html">เกี่ยวกับ</a></li>
+          <li><a href="services.html">บริการ</a></li>
+          <li><a href="contact.html">ติดต่อ</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- 4.1 Contact from -->
     <main>
+      <h1 class="description">ติดต่อ McDonald’s</h1>
       <section id="contact_form">
         <form action="#">
           <fieldset>
@@ -43,8 +54,8 @@
             ></textarea
             ><br />
             <div>
-              <input type="submit" value="ยืนยัน" />
-              <input type="reset" value="ยกเลิก" />
+              <input type="reset" value="ยกเลิก" class="btn-reset" />
+              <input type="submit" value="ยืนยัน" class="btn-submit" />
             </div>
           </fieldset>
         </form>
