@@ -45,7 +45,7 @@ header {
   background-color: var(--accent);
   display: flex;
   justify-content: space-between;
-  box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
   height: 8vh;
   border-bottom: 0.3rem solid #ffc600;
 }
@@ -83,7 +83,14 @@ li a:hover {
   text-align: center;
   min-height: 70vh;
   align-content: center;
-  /* ปรับสีฟ้อนใหม่ */
+  color: var(--accent);
+  font-size: 1.5rem;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.7);
+}
+.hero h2 {
+  color: var(--accent);
+  font-size: 4rem;
+  text-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
 }
 .hero::before {
   content: "";
@@ -93,7 +100,7 @@ li a:hover {
   background-position: center;
   background-size: cover;
   z-index: -1;
-  filter: blur(0.15rem);
+  filter: blur(0.2rem);
 }
 .featured-services {
   background-color: var(--accent);
@@ -104,7 +111,6 @@ li a:hover {
   }
 }
 .card {
-  /*ตรงนี้เป็น card เรียงแนวเดียว*/
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   background-color: var(--accent);
@@ -112,7 +118,6 @@ li a:hover {
   margin: 0 1rem;
   flex-direction: column;
   border-radius: 0.5rem;
-  flex: 1;
   text-align: center;
   width: 320px;
   height: 350px;
@@ -164,14 +169,10 @@ items:hover {
 }
 .card:hover {
   transform: translateY(-1.5rem);
+  border: 2px solid var(--primary);
 }
-.btn-back-to-top:active {
-}
-li:first-child {
-}
-li:last-child {
-}
-li:nth-child {
+.card:active {
+  border: 3px solid var(--secondary);
 }
 
 .container {
@@ -212,6 +213,7 @@ li:nth-child {
   right: 1.5rem;
   background-color: var(--accent);
   color: var(--text);
+  font-weight: 500;
 }
 .services-list {
   display: block;
@@ -235,4 +237,83 @@ li:nth-child {
   height: 3rem;
   background-color: #ffc600;
   border-radius: 2px;
+}
+.card-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.compare_package {
+  margin: 3rem 0;
+  text-align: center;
+}
+.compare_package h2 {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1rem;
+  display: inline-block;
+  position: relative;
+}
+.compare_package h2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -0.6rem;
+  transform: translateY(-50%);
+  width: 0.3rem;
+  height: 2.2rem;
+  background-color: var(--secondary);
+  border-radius: 2px;
+}
+.compare_package table {
+  margin: auto;
+  width: 70%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  table-layout: fixed;
+}
+
+.compare_package thead {
+  background: #ffbc0d;
+}
+.compare_package th {
+  padding: 0.75rem;
+  font-weight: bold;
+  color: #222;
+}
+.compare_package td {
+  padding: 0.65rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.compare_package tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.compare_package tbody tr:hover {
+  background: #fff3cd;
+}
+
+.compare_package td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+.compare_package tbody tr:last-child td {
+  font-weight: bold;
+  color: #c00;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .compare_package table {
+    width: 95%;
+    font-size: 0.9rem;
+  }
 }
